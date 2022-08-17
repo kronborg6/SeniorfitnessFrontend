@@ -11,6 +11,7 @@ export default function (props) {
   if (authMode === "signin") {
     return (
       <div className="Auth-form-container">
+        <div className="overlay"></div>
         <form className="Auth-form">
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Sign In</h3>
@@ -52,6 +53,7 @@ export default function (props) {
 
   return (
     <div className="Auth-form-container">
+      <div className="overlay"></div>
       <form className="Auth-form">
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Sign In</h3>

@@ -1,15 +1,32 @@
-.App {
-    background-color: white;
-  }
-  
+:root{
+  --primary-color: #000 
+}
+
   .Auth-form-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
     height: 100vh;
+    background: url(../images/backgroundlogin.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+    z-index: 1;
   }
   
+  .overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: var(--primary-color);
+    opacity: 0.5;
+    z-index: 1;
+    }
+    
+
   .Auth-form {
     width: 420px;
     box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
@@ -17,6 +34,7 @@
     padding-bottom: 20px;
     border-radius: 8px;
     background-color: white;
+    z-index: 1;
   }
   
   .Auth-form-content {

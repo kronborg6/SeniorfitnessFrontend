@@ -1,0 +1,21 @@
+.container-custom {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+    .container-custom { width: 1140px; }
+}
+
+@media (min-width: 1400px) {
+    .container-custom { width: 1340px; }
+}
+
+@media (min-width: 1600px) {
+    .container-custom { width: 1520px; }
+}
+
+.footer .border-highlight{
+    border-top: 1px solid #6c757d 
+}

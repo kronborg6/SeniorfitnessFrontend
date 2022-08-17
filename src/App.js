@@ -1,5 +1,6 @@
 import './App.css';
 import Login from './Login';
+import Footer from './Footer'
 import Header from './Header';
 import Landing from './Landing';
 import {
@@ -26,6 +27,7 @@ function App() {
 
         />
         </Routes>
+        < Footer />
     </div>
     </BrowserRouter>
   );

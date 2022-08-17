@@ -9,9 +9,9 @@ import {BrowserRouter as Router, Link} from 'react-router-dom';
 
 function Header() {
   return (
-    <Navbar bg="dark" variant="dark">
-    <Container>
-      <Navbar.Brand href="/">
+    <Navbar className='navbar navbar-expand-sm fixed-top navbar-light'>
+    <Container className='nav__text'>
+      <Navbar.Brand  className='text-white' href="/">
         <img
           alt=""
           src={logo}
@@ -22,13 +22,14 @@ function Header() {
         Senior Fitness
       </Navbar.Brand>
       <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link className='text-white' href="/">Home</Nav.Link>
+            <Nav.Link  className='text-white' href="#pricing">Pricing</Nav.Link>
           </Nav>
           <Form className="d-flex">
          
-         <Link to="/Login"><button type="button" class="btn btn-primary">Login</button></Link> 
+          <a href='/Login' className='mt-2 btn btn-lg btn-outline-light' role="button">
+                Login
+            </a>          
           </Form>
     </Container>
   </Navbar>
