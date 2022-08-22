@@ -44,7 +44,7 @@ function Landing() {
           <div className='col-12 col-sm-6 align-self-center justify-content-md-center'>
             <div className='steps__content-width'>
               <span>01</span>
-              <h1 className='h2 mb-4'> Big machine = big stonks</h1>
+              <h1 className='h2 mb-4'> The best out there</h1>
               <p className='mb-4'> dawuihawuikdahwydhyawgdhawgdhqgadhyuaghdg </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ function Landing() {
           <div className='col-12 col-sm-6 align-self-center justify-content-md-center'>
             <div className='steps__content-width'>
               <span>02</span>
-              <h1 className='h2 mb-4'> Big machine = big stonks</h1>
+              <h1 className='h2 mb-4'> Food machines</h1>
               <p className='mb-4'> dawuihawuikdahwydhyawgdhawgdhqgadhyuaghdg </p>
             </div>
           </div>
@@ -80,7 +80,7 @@ function Landing() {
           <div className='col-12 col-sm-6 align-self-center justify-content-md-center'>
             <div className='steps__content-width'>
               <span>03</span>
-              <h1 className='h2 mb-4'> Big machine = big stonks</h1>
+              <h1 className='h2 mb-4'> Showers</h1>
               <p className='mb-4'> dawuihawuikdahwydhyawgdhawgdhqgadhyuaghdg </p>
             </div>
           </div>

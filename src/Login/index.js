@@ -1,8 +1,34 @@
 import React, { useState } from "react"
+import PropTypes from 'prop-types';
 import './index.css';
 
-export default function (props) {
+
+async function loginUser(credentials) {
+  return fetch('http://172.16.3.91:3000/users/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(credentials)
+  })
+    .then(data => data.json())
+ }
+ 
+
+export default function Login ({setToken}) {
+  const [username, setUserName] = useState();
+  const [password, setPassword] = useState();
   let [authMode, setAuthMode] = useState("signin")
+
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    const token = await loginUser({
+      username,
+      password
+    });
+    setToken(token);
+  }
 
   const changeAuthMode = () => {
     setAuthMode(authMode === "signin" ? "signup" : "signin")
@@ -12,7 +38,7 @@ export default function (props) {
     return (
       <div className="Auth-form-container">
         <div className="overlay"></div>
-        <form className="Auth-form">
+        <form className="Auth-form" onSubmit={handleSubmit}>
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Sign In</h3>
             <div className="text-center">
@@ -24,9 +50,10 @@ export default function (props) {
             <div className="form-group mt-3">
               <label>Email address</label>
               <input
-                type="email"
+                type="text"
                 className="form-control mt-1"
                 placeholder="Enter email"
+                onChange={e => setUserName(e.target.value)}
               />
             </div>
             <div className="form-group mt-3">
@@ -35,6 +62,7 @@ export default function (props) {
                 type="password"
                 className="form-control mt-1"
                 placeholder="Enter password"
+                onChange={e => setPassword(e.target.value)}
               />
             </div>
             <div className="d-grid gap-2 mt-3">
@@ -99,4 +127,7 @@ export default function (props) {
       </form>
     </div>
   )
-}
+  }
+  Login.propTypes = {
+    setToken: PropTypes.func.isRequired
+  }

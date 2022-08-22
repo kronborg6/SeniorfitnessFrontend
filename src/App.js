@@ -3,13 +3,20 @@ import Login from './Login';
 import Footer from './Footer'
 import Header from './Header';
 import Landing from './Landing';
+import React,{useState} from 'react'
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
 } from "react-router-dom";
 
 function App() {
+  const [token, setToken] = useState();
+
+  if(!token){
+    return <Login setToken={setToken} />
+  }
+
   return (
     <BrowserRouter>
     <div>
