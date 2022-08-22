@@ -4,6 +4,7 @@ import Footer from './Footer'
 import Header from './Header';
 import Landing from './Landing';
 import React,{useState} from 'react'
+import useToken from './Hooks/useToken.js'
 import {
   BrowserRouter,
   Routes,
@@ -11,7 +12,7 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const [token, setToken] = useState();
+  const { token, setToken } = useToken();
 
   if(!token){
     return <Login setToken={setToken} />

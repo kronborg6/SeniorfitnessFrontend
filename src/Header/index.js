@@ -1,13 +1,22 @@
 import './index.css';
-import React from 'react';
+import React,{useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../images/logo.png';
+import useToken from '../Hooks/useToken.js'
 import {BrowserRouter as Router, Link} from 'react-router-dom';
 
+
+
 function Header() {
+  const { token, setToken } = useToken();
+
+  const handleClick = () => {
+    setToken(!token);
+  };
+  
   return (
     <Navbar className='navbar navbar-expand-sm fixed-top navbar-light'>
     <Container className='nav__text'>
@@ -26,10 +35,9 @@ function Header() {
             <Nav.Link  className='text-white' href="#pricing">Pricing</Nav.Link>
           </Nav>
           <Form className="d-flex">
-         
-          <a href='/Login' className='mt-2 btn btn-lg btn-outline-light' role="button">
-                Login
-            </a>          
+          {token ? <button onClick={handleClick} className='mt-2 btn btn-lg btn-outline-light' role="button" >
+                Logout
+            </button> : <button>login</button>}          
           </Form>
     </Container>
   </Navbar>
