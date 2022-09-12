@@ -45,7 +45,7 @@ function Landing() {
             <div className='steps__content-width'>
               <span>01</span>
               <h1 className='h2 mb-4'> The best out there</h1>
-              <p className='mb-4'> dawuihawuikdahwydhyawgdhawgdhqgadhyuaghdg </p>
+              <p className='mb-4'> Test </p>
             </div>
           </div>
         </div>
@@ -62,8 +62,8 @@ function Landing() {
           <div className='col-12 col-sm-6 align-self-center justify-content-md-center'>
             <div className='steps__content-width'>
               <span>02</span>
-              <h1 className='h2 mb-4'> Food machines</h1>
-              <p className='mb-4'> dawuihawuikdahwydhyawgdhawgdhqgadhyuaghdg </p>
+              <h1 className='h2 mb-4'> Vending machines</h1>
+              <p className='mb-4'> Test </p>
             </div>
           </div>
         </div>
@@ -81,7 +81,7 @@ function Landing() {
             <div className='steps__content-width'>
               <span>03</span>
               <h1 className='h2 mb-4'> Showers</h1>
-              <p className='mb-4'> dawuihawuikdahwydhyawgdhawgdhqgadhyuaghdg </p>
+              <p className='mb-4'> Test </p>
             </div>
           </div>
         </div>
@@ -94,22 +94,19 @@ function Landing() {
             <div className='col-12 col-sm-4 mb-4'>
               <img src={imageStep1}  class="mb-4 img-fluid" alt="Training" width="441" height="248" loading="lazy" />
               <h3>Amazing equpiment</h3>
-              <p>awduhauidhuawhdukawdhyjadyuagdyuhadyadyaukdh
-                aukdhauhdhjahgdhagdhagdhgadhgadgahdh</p>
+              <p>Test</p>
             </div>
 
             <div className='col-12 col-sm-4 mb-4'>
               <img src={imageStep1}  class="mb-4 img-fluid" alt="Training" width="441" height="248" loading="lazy" />
               <h3>Amazing equpiment</h3>
-              <p>awduhauidhuawhdukawdhyjadyuagdyuhadyadyaukdh
-                aukdhauhdhjahgdhagdhagdhgadhgadgahdh</p>
+              <p>Test</p>
             </div>
 
             <div className='col-12 col-sm-4 mb-4'>
               <img src={imageStep1}  class="mb-4 img-fluid" alt="Training" width="441" height="248" loading="lazy" />
               <h3>Amazing equpiment</h3>
-              <p>awduhauidhuawhdukawdhyjadyuagdyuhadyadyaukdhaukdha
-                uhdhjahgdhagdhagdhgadhgadgahdh</p>
+              <p>Test</p>
             </div>
           </div>
         </div>  

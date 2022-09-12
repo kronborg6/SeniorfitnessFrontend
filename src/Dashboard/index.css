@@ -1,0 +1,23 @@
+.icon-Delete{
+align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.btn-Delete{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.custom-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+  

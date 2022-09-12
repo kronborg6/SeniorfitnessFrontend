@@ -1,10 +1,11 @@
 import React, { useState } from "react"
 import PropTypes from 'prop-types';
 import './index.css';
-
+import useToken from '../Hooks/useToken.js'
+import { Navigate } from 'react-router-dom';
 
 async function loginUser(credentials) {
-  return fetch('http://172.16.3.91:3000/users/login', {
+  return fetch('http://localhost:3000/users/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -12,22 +13,34 @@ async function loginUser(credentials) {
     body: JSON.stringify(credentials)
   })
     .then(data => data.json())
+    
  }
  
 
-export default function Login ({setToken}) {
-  const [username, setUserName] = useState();
+export default function Login () {
+  const [email, setUserName] = useState();
   const [password, setPassword] = useState();
   let [authMode, setAuthMode] = useState("signin")
+  const { token, setToken } = useToken();
+ 
 
+  if(token){
+    return <Navigate to="/" />;
+  }
 
+    
   const handleSubmit = async e => {
     e.preventDefault();
+    try{
     const token = await loginUser({
-      username,
+      email,
       password
-    });
+    })
     setToken(token);
+  }
+  catch(e){
+    alert("credentials are incorrect");
+  }
   }
 
   const changeAuthMode = () => {

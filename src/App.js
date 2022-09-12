@@ -3,27 +3,28 @@ import Login from './Login';
 import Footer from './Footer'
 import Header from './Header';
 import Landing from './Landing';
-import React,{useState} from 'react'
-import useToken from './Hooks/useToken.js'
+import Dashboard from './Dashboard';
+import PrivateRoutes from './utils/PrivateRoutes';
+import React from 'react'
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
 
-function App() {
-  const { token, setToken } = useToken();
 
-  if(!token){
-    return <Login setToken={setToken} />
-  }
+function App() {
 
   return (
     <BrowserRouter>
     <div>
       <Header />
         <Routes>
-          <Route path="/" element={<Landing/>} />
+        <Route element={<PrivateRoutes />}>
+          <Route path="/Dashboard" element={<Dashboard/>}/>
+        </Route>
+        <Route index element={<Landing />} />
+          <Route path="/" element={<Landing/> } />
           <Route path="/login" element={<Login />} />
           <Route
         path="*"
@@ -35,7 +36,6 @@ function App() {
 
         />
         </Routes>
-        < Footer />
     </div>
     </BrowserRouter>
   );
