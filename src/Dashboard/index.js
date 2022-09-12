@@ -1,7 +1,6 @@
-import React from 'react';
-import {useState} from 'react';
 import { Button,Modal } from 'react-bootstrap';
 import { TiDelete } from "react-icons/ti";
+import React, { useEffect, useState } from "react"
 import './index.css';
 
 
@@ -10,6 +9,21 @@ const Dashboard = () => {
  
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const [products, setProducts] = useState([])
+
+
+   useEffect(() => {
+    fetch('http://172.16.3.91:8000/equipment')
+        .then(res => {
+            return res.json();
+        }) 
+        .then(data => {
+            setProducts(data.equipment)
+        });
+   }, []);
+
+   console.log(products.name)
 
     return(
       <div class="container">
@@ -46,17 +60,22 @@ const Dashboard = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        
+                    { products.map((product) => (
                         <tr>
-                            <td>1</td>
-                            <td>Rual Octo</td>
-                            <td>Deban Steet</td>
-                            <td>Newyork</td>
-                            <td>USA</td>
-                            <td>
-                                <button className='btn-Delete'><div className='icon-Delete'> <TiDelete /> </div></button>
-                            </td>
+                            <td key={product.id}></td>
+                            <td>{product.name} </td>
+                            <td>{product.class} </td>
+                            <td>{product.maxWeigt} </td>
+                            <td>{product.HowMany} </td>
+
+
                         </tr>
+                    
+                    ))}  
+                    <td>
+                        <button className='btn-Delete'><div className='icon-Delete'> <TiDelete /> </div></button>
+                    </td>
+                
                     </tbody>
                 </table>
             </div>   

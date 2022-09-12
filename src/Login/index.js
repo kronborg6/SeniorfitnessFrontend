@@ -5,7 +5,7 @@ import useToken from '../Hooks/useToken.js'
 import { Navigate } from 'react-router-dom';
 
 async function loginUser(credentials) {
-  return fetch('http://localhost:3000/users/login', {
+  return fetch('http://172.16.3.91:8000/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -19,7 +19,7 @@ async function loginUser(credentials) {
 
 export default function Login () {
   const [email, setUserName] = useState();
-  const [password, setPassword] = useState();
+  const [passwordb, setPassword] = useState();
   let [authMode, setAuthMode] = useState("signin")
   const { token, setToken } = useToken();
  
@@ -34,7 +34,7 @@ export default function Login () {
     try{
     const token = await loginUser({
       email,
-      password
+      passwordb
     })
     setToken(token);
   }
