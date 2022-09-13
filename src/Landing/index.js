@@ -102,8 +102,8 @@ function Landing() {
         </div>
       </section>
 
-      <section className='bg-dark text-white py-4'>
-        <div className='container-custom my-4'>
+      <section data-aos="fade"  className='bg-dark text-white py-4'>
+        <div  className='container-custom my-4'>
           <div className='row'>
             <div className='col-12 col-sm-4 mb-4 d-flex justify-content-center' >
               <figure class="figure  text-center">

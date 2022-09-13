@@ -6,7 +6,7 @@ const PrivateRoutes = () => {
     const { token } = useToken();
 
     return(
-        token ? <Outlet /> : <Navigate to="/login"/>
+        token ? <Outlet /> : <Navigate to="/" replace/>
     )
 }
 

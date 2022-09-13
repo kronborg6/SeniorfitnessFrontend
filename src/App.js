@@ -20,12 +20,13 @@ function App() {
     <div>
       <Header />
         <Routes>
-        <Route element={<PrivateRoutes />}>
-          <Route path="/Dashboard" element={<Dashboard/>}/>
-        </Route>
+ 
         <Route index element={<Landing />} />
           <Route path="/" element={<Landing/> } />
           <Route path="/login" element={<Login />} />
+          <Route element={<PrivateRoutes />}>
+          <Route path="/Dashboard" element={<Dashboard/>}/>
+        </Route>
           <Route
         path="*"
         element={
