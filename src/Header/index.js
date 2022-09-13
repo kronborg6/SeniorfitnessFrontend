@@ -31,7 +31,6 @@ function Header() {
       </Navbar.Brand>
       <Nav className="me-auto">
             <Nav.Link className='text-white' href="/">Home</Nav.Link>
-            <Nav.Link  className='text-white' href="#pricing">Pricing</Nav.Link>
             {!token ? "" : <Nav.Link  className='text-white' href="/dashboard">Dashboard</Nav.Link>}
           </Nav>
           <Form className="d-flex">

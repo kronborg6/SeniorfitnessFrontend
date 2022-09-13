@@ -98,19 +98,25 @@ function Landing() {
       <section className='bg-dark text-white py-4'>
         <div className='container-custom my-4'>
           <div className='row'>
-            <div className='col-12 col-sm-4 mb-4'>
-              <img src={profile3}  class="mb-4 img-fluid" alt="Training" width="441" height="248" loading="lazy" />
-              <h3>Fitness instructor</h3>
+            <div className='col-12 col-sm-4 mb-4 d-flex justify-content-center' >
+              <figure class="figure  text-center">
+              <img src={profile3}  class="mb-4 img-fluid custom-img" alt="Training"   loading="lazy" />
+              <figcaption class="figure-caption text-right">Senior Fitness instructor</figcaption>
+              </figure>
             </div>
 
-            <div className='col-12 col-sm-4 mb-4'>
-              <img src={profile1}  class="mb-4 img-fluid" alt="Training" width="441" height="248" loading="lazy" />
-              <h3>Fitness Owner</h3>
+            <div className='col-12 col-sm-4 mb-4 d-flex justify-content-center'>
+              <figure class="figure  text-center">
+              <img src={profile1}  class="mb-4 img-fluid custom-img" alt="Training"  loading="lazy" />
+              <figcaption class="figure-caption text-right">Senior Fitness Owner</figcaption>
+              </figure>
             </div>
 
-            <div className='col-12 col-sm-4 mb-4'>
-              <img src={profile2}  class="mb-4 img-fluid" alt="Training" width="441" height="248" loading="lazy" />
-              <h3>Fitness Administrator</h3>
+            <div className='col-12 d-flex col-sm-4 mb-4 d-flex justify-content-center'>
+            <figure class="figure  text-center">
+              <img src={profile2}  class="mb-4 img-fluid custom-img" alt="Training"  loading="lazy" />
+              <figcaption class="figure-caption text-right">Senior Fitness Administrator</figcaption>
+            </figure>
             </div>
           </div>
         </div>  

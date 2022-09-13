@@ -12,6 +12,11 @@ html {
     overflow: hidden;
 }
 
+.custom-img{
+    max-height: 50% !important;
+    max-width: 50% !important;
+ }
+
 hero__video{
 position: absolute;
 top: 50%;
