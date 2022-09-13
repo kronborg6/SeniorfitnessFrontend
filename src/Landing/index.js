@@ -1,5 +1,5 @@
 import './index.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Video from '../images/production ID 5092620.mp4';
 import { BsArrowDownShort } from "react-icons/bs";
 import  imageStep1 from '../images/step1.jpg';
@@ -8,13 +8,20 @@ import  imageStep3 from '../images/step3.jpg';
 import  profile1 from '../images/profile1.jpg';
 import  profile2 from '../images/profile2.jpg';
 import  profile3 from '../images/profile3.jpg';
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 
 function Landing() {
+
+  useEffect(() => {
+    Aos.init({duration:2000});
+
+  }, []);
+
   return (
     <div>
-      <section className='hero'>
+       <section className='hero'>
         <div className='hero__overlay'> 
 
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" Loop="loop" Loading="Lazy" className='hero__video'>
@@ -44,7 +51,7 @@ function Landing() {
         <div className='container-custom'> 
       <a id="scroll-down" />
 
-        <div class="row">
+        <div data-aos="slide-right" class="row">
           <div className='col-12 col-sm-6 d-md-flex justify-content-md-center'>
             <img src={imageStep1} className="img-fluid pb-4 steps_section-thumbnail" alt="product" width="553" height="746" loading='lazy' />
           </div>
@@ -62,7 +69,7 @@ function Landing() {
       <section className='steps container-custom'>
       <a id="scroll-down" />
 
-        <div class="row">
+        <div data-aos="slide-left" class="row">
           <div className='col-12 col-sm-6 d-md-flex justify-content-md-center order-sm-1'>
             <img src={imageStep2} className="img-fluid pb-4 steps_section-thumbnail" alt="product" width="553" height="746" loading='lazy' />
           </div>
@@ -80,7 +87,7 @@ function Landing() {
         <div className='container-custom'> 
       <a id="scroll-down" />
 
-        <div class="row">
+        <div data-aos="fade" class="row">
           <div className='col-12 col-sm-6 d-md-flex justify-content-md-center'>
             <img src={imageStep3} className="img-fluid pb-4 steps_section-thumbnail" alt="product" width="553" height="746" loading='lazy' />
           </div>

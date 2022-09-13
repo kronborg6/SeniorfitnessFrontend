@@ -30,8 +30,12 @@ function Header() {
         Senior Fitness
       </Navbar.Brand>
       <Nav className="me-auto">
+        <div className="nav-item">
             <Nav.Link className='text-white' href="/">Home</Nav.Link>
+          </div>
+          <div className="nav-item">
             {!token ? "" : <Nav.Link  className='text-white' href="/dashboard">Dashboard</Nav.Link>}
+            </div>
           </Nav>
           <Form className="d-flex">
           {token ? <button onClick={handleLogout} className='mt-2 btn btn-lg btn-outline-light' role="button" >
