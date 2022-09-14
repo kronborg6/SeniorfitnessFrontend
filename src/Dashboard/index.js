@@ -14,7 +14,7 @@ const Dashboard = () => {
     const [HowMany, setHowMany] = useState();
  
    useEffect(() => {
-    fetch('http://172.16.3.91:8000/equipment')
+    fetch('http://localhost:8000/equipment')
         .then(res => {
             return res.json();
         }) 
@@ -35,7 +35,7 @@ const Dashboard = () => {
     e.preventDefault();
     const data = {name, clas, maxWeigt, HowMany}
 
-    fetch('http://172.16.3.91:8000/addequipment', {
+    fetch('http://localhost:8000/addequipment', {
       method: 'POST',
       headers: { "Content-Type": "application/json"},
       body: JSON.stringify(data)
