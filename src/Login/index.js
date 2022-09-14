@@ -5,7 +5,7 @@ import useToken from '../Hooks/useToken.js'
 import { Navigate } from 'react-router-dom';
 
 async function loginUser(credentials) {
-  return fetch('http://172.16.3.91:8000/login', {
+  return fetch('http://localhost:8000/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
